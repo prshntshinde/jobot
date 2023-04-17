@@ -1,0 +1,8 @@
+{
+    "cSpell.words": [
+        "tailwindcss"
+    ],
+    "eslint.workingDirectories": [
+        "./jobot-web"
+    ]
+}
