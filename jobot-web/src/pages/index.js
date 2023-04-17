@@ -25,12 +25,7 @@ export default function Home() {
         setBotMessage(resJson.choices[0].message.content);
     };
 
-    /* Button to Invoke the above code */
-    <div className="p-4">
-        <button onClick={sendRequest} className="w-40 bordered rounded bg-blue-500 hover:bg-blue-600 text-white p-2">Send Request </button>
-        <div className="mt-4 text-lg">{botMessage}</div>
-    </div>
-
+    
 
     /* Add more logic here*/
 
@@ -50,6 +45,13 @@ export default function Home() {
                 </div>
             </div>
         </nav>
+
+    {/* Test Button */}
+    <div className="p-4">
+        <button onClick={sendRequest} className="w-40 bordered rounded bg-blue-500 hover:bg-blue-600 text-white p-2">Send Request </button>
+        <div className="mt-4 text-lg">{botMessage}</div>
+    </div>
+
         {/* Add more UI here */}
     </div>
     );
