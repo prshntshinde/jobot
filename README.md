@@ -16,3 +16,8 @@ Jobot, a helpful and programmable AI that can be deeply integrated into any soft
 >
 > 4. The user can provide their OpenAI API key in a secure input box in the page header
 
+### Run the Project
+1. Move into the project folder by running:
+    - cd my-next-app
+2. Run the following command to start the NextJS development server:
+    - npm run dev 
