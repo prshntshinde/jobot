@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
+import ReactMarkdown from "react-markdown";
 
 export default function Home() {
     const [apiKey, setApiKey] = useState("");
@@ -21,7 +22,7 @@ export default function Home() {
         },
         ];
 
-        setMessages(updatedMessages);
+        setMessages(updateMessages);
         setUserMessage("");
 
         try {
@@ -74,7 +75,7 @@ export default function Home() {
 
     /* Add more logic here*/
 
-    
+
     return (
         <>
             <Head>
@@ -103,7 +104,10 @@ export default function Home() {
                                 <div className="font-bold">
                                     {msg.role === "user" ? "You" : "Jobot"}
                                 </div>
-                                <div className="text-lg">{msg.content}</div>
+                                {/* <div className="text-lg">{msg.content}</div> */}
+                                <div className="prose-lg">
+                                    <ReactMarkdown>{msg.content}</ReactMarkdown>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -115,7 +119,7 @@ export default function Home() {
                         Send
                     </button>
                 </div>
-                </div>
-            </>
-            );
+            </div>
+        </>
+    );
 }
